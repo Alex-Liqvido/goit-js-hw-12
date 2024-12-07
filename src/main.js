@@ -79,3 +79,5 @@ loadMoreButton.addEventListener('click', async () => {
     loader.classList.add('is-hidden');
   }
 });
+
+
