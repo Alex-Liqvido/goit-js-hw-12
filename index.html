@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pictures</title>
+    <title>Posts</title>
     <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-tnUJPedx.js">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-CWKLx11g.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-d2Mx4QLx.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-B7SGDt3g.css">
   </head>
   <body>
-    <form id="search-form" class="form">
-      <input type="text" name="searchQuery" placeholder="Search images..." class="input"/>
-      <button type="submit" class="button">Search</button>
-    </form>
-    
-    <div class="gallery"></div>
-    <span class="loader is-hidden">Loading images, please wait...</span>
+      <form id="search-form" class="form">
+        <input type="text" name="searchQuery"  class="input" placeholder="Search images..." required />
+        <button type="submit" class="button">Search</button>
+      </form>
+      <div class="gallery"></div>
+      <div class="load-more-container">
+        <span class="loader is-hidden">Loading...</span>
+        <button class="load-more is-hidden">Load More</button>
+      </div>
 
   </body>
 </html>
