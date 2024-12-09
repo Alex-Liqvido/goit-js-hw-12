@@ -1,9 +1,11 @@
-export const clearGallery = (galleryElement) => {
-    galleryElement.innerHTML = '';
-  };
-  
-  export const renderImages = (images, galleryElement) => {
-    const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
+export function clearGallery(galleryElement) {
+  galleryElement.innerHTML = '';
+}
+
+export function renderImages(images, galleryElement) {
+  const markup = images
+    .map(
+      ({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
       <a href="${largeImageURL}" class="gallery__item">
         <div class="photo-card">
           <img src="${webformatURL}" alt="${tags}" loading="lazy" />
@@ -15,7 +17,9 @@ export const clearGallery = (galleryElement) => {
           </div>
         </div>
       </a>
-    `).join('');
-    
-    galleryElement.insertAdjacentHTML('beforeend', markup);
-  };
+    `
+    )
+    .join('');
+
+  galleryElement.insertAdjacentHTML('beforeend', markup);
+}
